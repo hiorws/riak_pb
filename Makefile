@@ -1,5 +1,9 @@
 .PHONY: all
-all:
+all: compile
+
+.PHONY: compile
+compile: | rebar3
+	( cd riakc_rebar3_demo && ../rebar3 compile; )
 
 REBAR3_V = 3.2.0
 
